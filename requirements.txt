@@ -1,0 +1,5 @@
+# Native Python 3.10/3.11 installation. Do not install this file inside NGC;
+# the Dockerfile uses requirements-ngc.txt to preserve NVIDIA TensorFlow.
+tensorflow==2.17.0
+tf-keras==2.17.0
+-r environment/requirements-ngc.txt

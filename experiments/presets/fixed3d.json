@@ -1,0 +1,36 @@
+{
+  "dimension": 3,
+  "task": "fixed_waypoints",
+  "backend": "cloud",
+  "evaluation_centers_per_region": 10,
+  "cache": {
+    "module": "boids.generate_boids_cache_3d",
+    "args": {
+      "unique": 1500, "repeats": 1, "n_boids": 100,
+      "perception": 0.1, "sample_mode": "octant",
+      "octants": [0, 1, 2, 3, 4, 5, 6, 7],
+      "goal_exclusion_size": 0.5, "goal_arrival_radius": 0.5,
+      "seed": 1, "output": "cached_datasets/fixed3d_1500_per_octant.h5",
+      "skip_centers_plot": true
+    }
+  },
+  "train": {
+    "train_set_unique": 12000, "train_set_repeats": 1,
+    "normal_trajectories": 8000, "removal_trajectories": 0, "drift_trajectories": 4000,
+    "perturbation_interval": 500, "perturbation_probability": 0.1,
+    "drift_max_per_event": 10, "drift_bounds": [0.1, 0.1, 0.1],
+    "drift_perturb_velocity": true, "drift_velocity_bounds": [0.01, 0.01, 0.01],
+    "train_octants": [0, 1, 2, 3, 4, 5, 6, 7],
+    "octant_unique_counts": [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500],
+    "n_boids": 100, "perception": 0.1,
+    "loss_type": "goal_weighted", "critical_distance": 2.5, "distance_weight": 2.5,
+    "lr": 0.0003, "batch_size": 1024, "epochs": 10000,
+    "lr_red_factor": 0.1, "min_lr": 0.000001, "lr_patience": 3,
+    "chunk_size": 800, "chunk_patience": 10, "val_set_size": 16,
+    "timestep_stride": 1, "near_goal_radius": 1.0,
+    "goal_exclusion_size": 0.5, "goal_arrival_radius": 0.5,
+    "generation_workers": 0, "generation_seed": 1, "weight_init_seed": 1,
+    "steps_per_execution": 100, "run_tag_suffix": "perturbed",
+    "skip_evaluation": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dimension": 2,
+  "task": "fixed_waypoints",
+  "backend": "local",
+  "evaluation_centers_per_region": 10,
+  "cache": {
+    "module": "boids.generate_boids_cache",
+    "args": {
+      "unique": 125, "repeats": 2, "n_boids": 100,
+      "sample_mode": "quadrant", "quadrants": [0, 1, 2, 3],
+      "goal_exclusion_size": 0.5, "goal_arrival_radius": 0.5,
+      "seed": 1, "output": "cached_datasets/fixed2d_500x2.h5"
+    }
+  },
+  "train": {
+    "lr": 0.0003, "batch_size": 256, "epochs": 10000,
+    "lr_red_factor": 0.1, "min_lr": 0.0, "lr_patience": 10,
+    "chunk_size": 200, "chunk_patience": 20, "val_set_size": 10,
+    "train_set_unique": 500, "train_set_repeats": 2,
+    "train_quadrants": [0, 1, 2, 3],
+    "n_boids": 100, "perception": 0.1,
+    "loss_type": "goal_weighted", "critical_distance": 2.5, "distance_weight": 2.5,
+    "timestep_stride": 5, "near_goal_radius": 1.0,
+    "goal_arrival_radius": 0.5,
+    "seed": 1, "weight_init_seed": 1,
+    "skip_evaluation": true
+  }
+}

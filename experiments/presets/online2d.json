@@ -1,0 +1,27 @@
+{
+  "dimension": 2,
+  "task": "online_goals",
+  "backend": "cloud",
+  "evaluation_centers_per_region": 10,
+  "train": {
+    "train_set_unique": 1500, "train_set_repeats": 1,
+    "normal_trajectories": 1000, "removal_trajectories": 0, "drift_trajectories": 500,
+    "perturbation_interval": 250, "perturbation_probability": 0.1,
+    "drift_max_per_event": 10, "drift_bounds": [0.1, 0.1],
+    "drift_perturb_velocity": true, "drift_velocity_bounds": [0.005, 0.005],
+    "n_boids": 100, "perception": 0.1,
+    "goal_waypoints_per_episode": 2,
+    "goal_bounds": [-4.5, 4.5, -4.5, 4.5],
+    "start_bounds": [-5, 5, -5, 5],
+    "goal_min_distance": 2.5, "goal_arrival_radius": 0.5,
+    "expert_max_steps": 10000,
+    "loss_type": "goal_weighted", "critical_distance": 2.5, "distance_weight": 2.5,
+    "lr": 0.0003, "batch_size": 512, "epochs": 10000,
+    "lr_red_factor": 0.1, "min_lr": 0.000001, "lr_patience": 3,
+    "chunk_size": 800, "chunk_patience": 10, "val_set_size": 16,
+    "timestep_stride": 1, "near_goal_radius": 1.0,
+    "steps_per_execution": 100, "generation_workers": 0, "seed": 1,
+    "run_tag_suffix": "perturbed",
+    "skip_evaluation": true
+  }
+}

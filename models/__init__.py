@@ -1,0 +1,1 @@
+from .gnn_ca_simple_boids import GNNCASimpleBoids

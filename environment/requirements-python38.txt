@@ -1,0 +1,24 @@
+# Machine Learning Core
+# tensorflow==2.4.1
+spektral==1.0.6
+
+# Critical Fixes for Python 3.8 Compatibility
+nolds==0.5.2
+
+# Data Processing & Math
+numpy==1.19.5
+scipy==1.4.1
+pandas==1.2.3
+scikit-learn==0.23.1
+networkx==2.5
+PyGSP==0.5.1
+h5py
+joblib>=1.0,<2.0
+tqdm>=4.0,<5.0
+
+# Visualization
+matplotlib==3.3.4
+shapely
+psutil
+# Optional compiled cloud expert support for the pinned Python 3.8 stack.
+numba==0.53.1

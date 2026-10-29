@@ -1,0 +1,20 @@
+# TensorFlow is supplied by the NVIDIA NGC TensorFlow image. Installing the
+# generic PyPI wheel here can replace NVIDIA's CUDA-enabled build.
+spektral==1.3.1
+nolds==0.5.2
+# nolds 0.5.2 imports pkg_resources, removed in newer setuptools releases.
+setuptools>=65,<81
+numpy>=1.24,<2.0
+scipy>=1.10,<2.0
+pandas>=1.5,<3.0
+scikit-learn>=1.2,<2.0
+networkx>=2.8,<4.0
+PyGSP>=0.5.1
+h5py>=3.8,<4.0
+joblib>=1.2,<2.0
+tqdm>=4.0,<5.0
+matplotlib>=3.7,<4.0
+shapely
+psutil
+# Compiled, GIL-free expert trajectory generation (both backends).
+numba>=0.60,<1.0
