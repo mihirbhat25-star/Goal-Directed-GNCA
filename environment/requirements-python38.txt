@@ -1,0 +1,14 @@
+# The TensorFlow 2.4 stack the code is also tested on, on CPU.
+# tensorflow==2.4.1
+spektral==1.0.6
+
+# Spektral's own dependencies, at the versions of this stack.
+numpy==1.19.5
+scipy==1.4.1
+pandas==1.2.3
+scikit-learn==0.23.1
+networkx==2.5
+
+matplotlib==3.3.4
+shapely
+numba==0.53.1

@@ -1,0 +1,13 @@
+# TensorFlow is supplied by the NVIDIA NGC TensorFlow image. Installing the
+# generic PyPI wheel here can replace NVIDIA's CUDA-enabled build.
+spektral==1.3.1
+# Spektral's own dependencies, kept within the versions the image works with.
+numpy>=1.24,<2.0
+scipy>=1.10,<2.0
+pandas>=1.5,<3.0
+scikit-learn>=1.2,<2.0
+networkx>=2.8,<4.0
+matplotlib>=3.7,<4.0
+shapely
+# Compiled, GIL-free expert trajectory generation.
+numba>=0.60,<1.0

@@ -1,0 +1,10 @@
+{
+  "dimension": 2,
+  "task": "fixed_waypoints",
+  "expert": {"n_boids": 100, "goal_arrival_radius": 0.5, "perception": 0.05, "crowding": 0.02, "init_scatter": 0.325, "start_bounds": [-5.0, 5.0, -5.0, 5.0], "region_order": "cycle", "expert_max_steps": 10000, "goal_exclusion_size": 0.5},
+  "drift": {"interval": 250, "probability": 0.1, "max_agents": 10, "position_bound": 0.1, "velocity_bound": 0.005},
+  "training": {"epochs": 10000, "critical_distance": 2.5, "distance_weight": 2.5, "lr_red_factor": 0.1, "min_lr": 1e-06, "lr_patience": 4, "chunk_patience": 10, "early_stopping_min_delta": 1e-08, "val_set_size": 10, "steps_per_execution": 100},
+  "onestep": {"trajectories": 2500, "perturbed": 833, "chunk_size": 500, "batch_size": 256, "lr": 0.0003, "grad_clip_norm": 0.0, "timestep_stride": 1, "near_goal_radius": 1.0},
+  "bptt": {"trajectories": 500, "perturbed": 0, "chunk_size": 500, "batch_size": 256, "window": 16, "lr": 3e-05, "grad_clip_norm": 1.0, "data_seed_offset": 1000},
+  "evaluation": {"centers_per_region": 10, "max_steps": 5000, "seed": 460, "success_threshold": 0.5, "online_goal_count": 5, "goal_min_distance": 2.5}
+}
